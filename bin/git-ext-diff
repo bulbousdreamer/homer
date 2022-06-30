@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+"${HOME}/.homer/${HOMER_OS_TYPE}/bin/git-ext-diff" "${@}"

@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+LOCAL="${1}"
+REMOTE="${2}"
+BASE="${3}"
+MERGED="${4}"
+
+"$(cygpath --unix --absolute "C:/Program Files/Beyond Compare 4/BComp.exe")" \
+  "$(cygpath --mixed --absolute "${LOCAL}")" \
+  "$(cygpath --mixed --absolute "${REMOTE}")" \
+  "$(cygpath --mixed --absolute "${BASE}")" \
+  /mergeoutput="$(cygpath --mixed --absolute "${MERGED}")"
+
+return_status=$?
+
+if [ ${return_status} -lt 100 ]; then
+    exit 0
+else
+    exit 1
+fi
