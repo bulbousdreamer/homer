@@ -191,5 +191,6 @@ export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/bash_history"
 HISTFILE="${HOME}/.homer/cyg/bash_history"
 
 PATH="${HOME}/bin${PATH:+:${PATH}}"
+PATH="${HOME}/.homer/${HOMER_OS_TYPE}/bin${PATH:+:${PATH}}"
 
 if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/cyg/bashrc"; fi
