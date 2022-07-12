@@ -1,4 +1,5 @@
 # homer_debug=
+
 if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.bash_profile"; fi
 
 export HOMER_GIT_DIR="${HOME}/git/homer/.bare"
@@ -18,6 +19,5 @@ Msys)
 esac
 
 . "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
-. "${HOME}/.bashrc"
 
 if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.bash_profile"; fi
