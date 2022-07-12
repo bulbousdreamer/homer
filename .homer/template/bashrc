@@ -1,7 +1,3 @@
 if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"; fi
 
-export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/bash_history"
-
-PATH="${HOME}/.homer/${HOMER_OS_TYPE}/bin${PATH:+:${PATH}}"
-
 if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"; fi
