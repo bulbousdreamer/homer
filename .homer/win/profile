@@ -1,4 +1,4 @@
-if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/cyg/profile"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/${HOMER_OS_TYPE}/profile"; fi
 
 # To the extent possible under law, the author(s) have dedicated all 
 # copyright and related and neighboring rights to this software to the 
@@ -38,4 +38,4 @@ export LANG=$(locale -uU)
 #   fi
 # fi
 
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/cyg/profile"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/profile"; fi

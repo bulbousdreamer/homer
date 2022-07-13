@@ -1,4 +1,4 @@
-if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/cyg/bash_functions"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/${HOMER_OS_TYPE}/bash_functions"; fi
 
 # Disables git subcommands based on gitconfig. For example, do not want to clean home directory.
 homer () {
@@ -13,4 +13,4 @@ homer () {
   git --git-dir="${HOMER_GIT_DIR}" --work-tree="${HOME}" "$@"
 }
 
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/cyg/bash_functions"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/bash_functions"; fi

@@ -1,4 +1,4 @@
-if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/cyg/bash_profile"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"; fi
 
 # To the extent possible under law, the author(s) have dedicated all 
 # copyright and related and neighboring rights to this software to the 
@@ -45,4 +45,4 @@ if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/cyg/bash_profile";
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/cyg/bash_profile"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"; fi

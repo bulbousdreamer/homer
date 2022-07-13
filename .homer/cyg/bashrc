@@ -1,4 +1,4 @@
-if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/cyg/bashrc"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"; fi
 
 # To the extent possible under law, the author(s) have dedicated all
 # copyright and related and neighboring rights to this software to the
@@ -188,9 +188,7 @@ export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/bash_history"
 #
 # alias cd=cd_func
 
-HISTFILE="${HOME}/.homer/cyg/bash_history"
-
 PATH="${HOME}/bin${PATH:+:${PATH}}"
 PATH="${HOME}/.homer/${HOMER_OS_TYPE}/bin${PATH:+:${PATH}}"
 
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/cyg/bashrc"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"; fi
