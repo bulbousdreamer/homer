@@ -38,4 +38,6 @@ export LANG=$(locale -uU)
 #   fi
 # fi
 
+. "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
+
 if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/profile"; fi

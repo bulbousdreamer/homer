@@ -1,16 +1,2 @@
 if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/${HOMER_OS_TYPE}/bash_functions"; fi
-
-# Disables git subcommands based on gitconfig. For example, do not want to clean home directory.
-homer () {
-  local disabled=$(git --git-dir="${HOMER_GIT_DIR}" --work-tree="${HOME}" config --bool disabled.${1} 2>/dev/null)
-  if ${disabled:-false}; then
-    echo "The ${1} command is intentionally disabled by this function."
-    echo "Cautiously run the disabled command by calling git with correct parameters instead:"
-    echo "git --git-dir=${HOMER_GIT_DIR} --work-tree=${HOME} ..."
-    return 1
-  fi
-  # Sets the git directory to the homer repo and work tree to home
-  git --git-dir="${HOMER_GIT_DIR}" --work-tree="${HOME}" "$@"
-}
-
 if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/bash_functions"; fi
