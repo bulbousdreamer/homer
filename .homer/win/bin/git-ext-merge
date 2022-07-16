@@ -1,15 +1,15 @@
 #!/usr/bin/bash
 
-LOCAL="${1}"
-REMOTE="${2}"
-BASE="${3}"
-MERGED="${4}"
+local_file="${1}"
+remote_file="${2}"
+base_file="${3}"
+merged_file="${4}"
 
 "$(cygpath --unix --absolute "C:/Program Files/Beyond Compare 4/BComp.exe")" \
-  "$(cygpath --mixed --absolute "${LOCAL}")" \
-  "$(cygpath --mixed --absolute "${REMOTE}")" \
-  "$(cygpath --mixed --absolute "${BASE}")" \
-  /mergeoutput="$(cygpath --mixed --absolute "${MERGED}")"
+  "$(cygpath --mixed --absolute "${local_file}")" \
+  "$(cygpath --mixed --absolute "${remote_file}")" \
+  "$(cygpath --mixed --absolute "${base_file}")" \
+  /mergeoutput="$(cygpath --mixed --absolute "${merged_file}")"
 
 return_status=$?
 
