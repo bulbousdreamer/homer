@@ -1,3 +1,0 @@
-if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"; fi
-
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"; fi
