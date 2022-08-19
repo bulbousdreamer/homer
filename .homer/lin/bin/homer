@@ -10,4 +10,4 @@ if ${disabled:-false}; then
 fi
 
 # Sets the git directory to the homer repo and work tree to home
-git --git-dir="${HOMER_GIT_DIR}" --work-tree="${HOME}" "$@"
+git --git-dir="${HOMER_GIT_DIR}" --work-tree="${HOME}" -c status.showUntrackedFiles=no "$@"

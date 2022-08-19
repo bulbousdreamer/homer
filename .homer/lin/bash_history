@@ -1,0 +1,3 @@
+cd ~/git/homer
+cd main
+less .homer/cyg/bash_profile 

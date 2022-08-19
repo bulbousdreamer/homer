@@ -1,7 +1,20 @@
-# homer_debug=
+export HOMER_GIT_DIR="${HOME}/git/homer/.bare"
+export HOMER_OS_TYPE=
 
-if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.bashrc"; fi
+case $( uname -o ) in
+Cygwin)
+  HOMER_OS_TYPE=cyg
+  ;;
+*Linux)
+  HOMER_OS_TYPE=lin
+  ;;
+Msys)
+  HOMER_OS_TYPE=win
+  ;;
+*)
+  echo "Unknown OS detected in ${HOME}/.bashrc"
+  HOMER_OS_TYPE=unk
+  ;;
+esac
 
 . "${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"
-
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.bashrc"; fi

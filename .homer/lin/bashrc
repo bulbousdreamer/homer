@@ -1,8 +1,9 @@
-# The latest version as installed by the Cygwin Setup program can
-# always be found at /etc/defaults/etc/skel/.bashrc
+# .bashrc
 
-# If not running interactively, don't do anything
-[[ "$-" != *i* ]] && return
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
 
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
@@ -29,4 +30,10 @@ export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 # export PROMPT_COMMAND="history -a"
 export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/bash_history"
 
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
 PATH="${HOME}/.homer/${HOMER_OS_TYPE}/bin${PATH:+:${PATH}}"
+export PATH

@@ -1,5 +1,3 @@
-if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/${HOMER_OS_TYPE}/profile"; fi
-
 # To the extent possible under law, the author(s) have dedicated all 
 # copyright and related and neighboring rights to this software to the 
 # public domain worldwide. This software is distributed without any warranty. 
@@ -40,4 +38,3 @@ export LANG=$(locale -uU)
 
 . "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
 
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/${HOMER_OS_TYPE}/profile"; fi
