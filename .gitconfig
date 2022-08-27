@@ -6,7 +6,7 @@
 	# Modifying this value may result in unexpected behavior.
 	# Use caution.
 	ignoreCase = false
-	editor = "git-editor"
+	editor = "git_editor.sh"
 [init]
 	defaultBranch = main
 [alias]
@@ -23,13 +23,13 @@
 	# See $(git help git) "Git Diffs" section
 	# $(git diff) will call this script with 7 variables
 	# Put it in a place on the $PATH
-	external = git-ext-diff
+	external = git_ext_diff.sh
 	trustExitCode = true
 	renames = true
 [merge]
 	ff = only
-	tool = git-ext-merge
-[mergetool "git-ext-merge"]
-	cmd = git-ext-merge "${LOCAL}" "${REMOTE}" "${BASE}" "${MERGED}"
+	tool = git_ext_merge
+[mergetool "git_ext_merge"]
+	cmd = git_ext_merge.sh "${LOCAL}" "${REMOTE}" "${BASE}" "${MERGED}"
 	prompt = false
 	keepBackup = false

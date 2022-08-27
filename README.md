@@ -33,8 +33,6 @@ It is inspired by this [Atlassian tutorial](https://www.atlassian.com/git/tutori
 cd ~/git
 git clone https://github.com/bulbousdreamer/homer
 cd homer
-# Optional: Hide untracked files in home directory
-git config --local status.showUntrackedFiles no
 # Add user information to local config to easily commit without having user name and email in ~/.gitconfig
 git config --local user.name "..."
 git config --local user.email "..."
@@ -58,7 +56,7 @@ To run Git commands in `HOME`, use the convenient `homer` script such as `homer 
 
 # Maintenance
 
-To avoid breaking the configuration in `HOME`, it is recommended that modifications are made in a regular repository such as `HOME/git/homer` then checked out to `HOME` once stable. To maintain basic functionality, ensure the OS can be detected by `homer/.bash_profile` and there are OS-specific `git-eidtor`, `git-ext-diff`, `git-ext-merge` to use Git normally.
+To avoid breaking the configuration in `HOME`, it is recommended that modifications are made in a regular repository such as `HOME/git/homer` then checked out to `HOME` once stable. To maintain basic functionality, ensure the OS can be detected by `homer/.bash_profile` and there are OS-specific `git_editor`, `git_ext_diff`, `git_ext_merge` to use Git normally.
 
 # Skeleton Files
 
