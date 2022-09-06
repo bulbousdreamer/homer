@@ -1,0 +1,59 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+PATH="${HOME}/.homer/${HOMER_OS_TYPE}/bin${PATH:+:${PATH}}"
+export PATH
+
+# Make bash append rather than overwrite the history on disk
+shopt -s histappend
+
+# When changing directory small typos can be ignored by bash
+# for example, cd /vr/lgo/apaache would find /var/log/apache
+shopt -s cdspell
+
+# Help with line wrapping hopefully
+shopt -s checkwinsize
+
+# History Options
+#
+# Don't put duplicate lines in the history and ignore commands beginning with space
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoreboth
+#
+# Ignore some controlling instructions
+# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
+# The '&' is a special pattern which suppresses duplicate entries.
+# export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
+#
+# Whenever displaying the prompt, write the previous line to disk
+# export PROMPT_COMMAND="history -a"
+export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/bash_history"
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
