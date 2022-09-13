@@ -40,7 +40,7 @@
 # shopt -s nocaseglob
 #
 # Make bash append rather than overwrite the history on disk
-shopt -s histappend
+# shopt -s histappend
 #
 # When changing directory small typos can be ignored by bash
 # for example, cd /vr/lgo/apaache would find /var/log/apache
@@ -54,17 +54,16 @@ shopt -s histappend
 # History Options
 #
 # Don't put duplicate lines in the history.
-export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+# export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 #
 # Ignore some controlling instructions
 # HISTIGNORE is a colon-delimited list of patterns which should be excluded.
 # The '&' is a special pattern which suppresses duplicate entries.
 # export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
-export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
+# export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 #
 # Whenever displaying the prompt, write the previous line to disk
-# export PROMPT_COMMAND="history -a"
-export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/bash_history"
+export PROMPT_COMMAND="history -a"
 
 # Aliases
 #
@@ -185,6 +184,3 @@ alias whence='type -a'                        # where, of a sort
 # }
 #
 # alias cd=cd_func
-
-PATH="${HOME}/.homer/${HOMER_OS_TYPE}/bin${PATH:+:${PATH}}"
-

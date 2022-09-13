@@ -1,4 +1,3 @@
-export HOMER_GIT_DIR="${HOME}/git/homer/.bare"
 export HOMER_OS_TYPE=
 
 case $( uname -o ) in
@@ -41,6 +40,7 @@ Msys)
   ;;
 esac
 
+echo "in .bash_profile"
 # https://github.com/detro/.bashrc.d
 # Source common settings for all OS's
 bash_profiles=()
@@ -52,8 +52,4 @@ for bash_profile in "${bash_profiles[@]}"; do
   . "${bash_profile}"
 done
 
-if [ "${HOMER_OS_TYPE}" == "unk" ]; then
-  echo "Unknown OS detected in ${HOME}/.bash_profile"
-else
-  . "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
-fi
+. "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
