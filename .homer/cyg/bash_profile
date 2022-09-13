@@ -1,4 +1,2 @@
 # The latest version as installed by the Cygwin Setup program can
 # always be found at /etc/defaults/etc/skel/.bash_profile
-
-. "${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"

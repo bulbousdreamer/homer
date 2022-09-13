@@ -1,1 +1,0 @@
-. "${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"

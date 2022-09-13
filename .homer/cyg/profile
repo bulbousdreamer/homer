@@ -36,5 +36,4 @@ export LANG=$(locale -uU)
 #   fi
 # fi
 
-. "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
 

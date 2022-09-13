@@ -42,6 +42,3 @@
 # if [ -d "${HOME}/info" ]; then
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
-
-. "${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"
-

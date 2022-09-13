@@ -40,7 +40,6 @@ Msys)
   ;;
 esac
 
-echo "in .bash_profile"
 # https://github.com/detro/.bashrc.d
 # Source common settings for all OS's
 bash_profiles=()
@@ -53,3 +52,5 @@ for bash_profile in "${bash_profiles[@]}"; do
 done
 
 . "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
+
+. "${HOME}/.homer/.bashrc"
