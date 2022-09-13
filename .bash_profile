@@ -37,10 +37,23 @@ Msys)
   HOMER_OS_TYPE=win
   ;;
 *)
-  echo "Unknown OS detected in ${HOME}/.bash_profile"
   HOMER_OS_TYPE=unk
   ;;
 esac
 
-. "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
+# https://github.com/detro/.bashrc.d
+# Source common settings for all OS's
+bash_profiles=()
+while IFS= read -d '' -r; do
+	bash_profiles+=("${REPLY}")
+done < <(find "${HOME}/.homer/bash_profile.d" -mindepth 1 -maxdepth 1 -type f -name *.sh -print0)
 
+for bash_profile in "${bash_profiles[@]}"; do
+  . "${bash_profile}"
+done
+
+if [ "${HOMER_OS_TYPE}" == "unk" ]; then
+  echo "Unknown OS detected in ${HOME}/.bash_profile"
+else
+  . "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
+fi
