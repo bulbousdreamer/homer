@@ -1,3 +1,6 @@
+homer_debug=
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.bashrc"; fi
+
 export HOMER_OS_TYPE=
 
 case $( uname -o ) in
@@ -41,3 +44,5 @@ Msys)
 esac
 
 . "${HOME}/.homer/${HOMER_OS_TYPE}/bashrc"
+
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.bashrc"; fi

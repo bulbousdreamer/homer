@@ -1,3 +1,6 @@
+homer_debug=
+if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.bash_profile"; fi
+
 export HOMER_OS_TYPE=
 
 case $( uname -o ) in
@@ -54,3 +57,5 @@ done
 . "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
 
 . "${HOME}/.homer/.bashrc"
+
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.profile"; fi

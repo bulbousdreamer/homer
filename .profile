@@ -1,3 +1,6 @@
+homer_debug=
+if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.profile"; fi
+
 export HOMER_OS_TYPE=
 
 case $( uname -o ) in
@@ -10,6 +13,7 @@ Cygwin)
     # freedesktop.org and systemd
     . /etc/os-release
     HOMER_OS_TYPE="${ID}"
+    echo $HOMER_OS_TYPE
 elif type lsb_release >/dev/null 2>&1; then
     # linuxbase.org
     HOMER_OS_TYPE=$(lsb_release -si)
@@ -40,5 +44,7 @@ Msys)
   ;;
 esac
 
-. "${HOME}/.homer/${HOMER_OS_TYPE}/.profile"
-. "${HOME}/.bash_profile
+. "${HOME}/.homer/${HOMER_OS_TYPE}/profile"
+. "${HOME}/.bash_profile"
+
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.profile"; fi
