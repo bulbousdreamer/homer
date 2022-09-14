@@ -1,5 +1,5 @@
 homer_debug=
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.bashrc"; fi
+if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.bashrc"; fi
 
 export HOMER_OS_TYPE=
 
