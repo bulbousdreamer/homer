@@ -1,0 +1,3 @@
+if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.homer/unk/bashrc"; fi
+
+if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.homer/unk/bashrc"; fi
