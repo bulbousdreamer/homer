@@ -1,4 +1,4 @@
-homer_debug=
+# homer_debug=
 if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.bashrc"; fi
 
 export HOMER_OS_TYPE=
