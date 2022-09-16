@@ -1,2 +1,6 @@
 auto_activate_base: false
 channel_priority: strict
+channels:
+  - conda-forge
+  - defaults
+show_channel_urls: true
