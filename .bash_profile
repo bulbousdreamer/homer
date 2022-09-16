@@ -56,6 +56,6 @@ done
 
 . "${HOME}/.homer/${HOMER_OS_TYPE}/bash_profile"
 
-. "${HOME}/.homer/.bashrc"
+. "${HOME}/.bashrc"
 
 if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.profile"; fi
