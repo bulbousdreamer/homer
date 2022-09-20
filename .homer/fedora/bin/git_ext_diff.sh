@@ -14,4 +14,4 @@ if cmp --silent "${old_file}" "${new_file}"; then
     exit 0
 fi
 
-vimdiff -c 'set wrap' -c 'wincmd w' -c 'set wrap'  "${old_file}" "${new_file}"
+bcompare  "${old_file}" "${new_file}"
