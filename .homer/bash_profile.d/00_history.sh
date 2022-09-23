@@ -12,7 +12,6 @@ export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 # Whenever displaying the prompt, write the previous line to disk
 # export PROMPT_COMMAND="history -a"
 export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/history/${HOSTNAME}"
-mkdir -p "$HISTFILE"
 
 export HISTSIZE=5000
 
