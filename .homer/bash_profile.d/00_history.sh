@@ -13,5 +13,7 @@ export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 # export PROMPT_COMMAND="history -a"
 export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/history/${HOSTNAME}"
 
+export HISTSIZE=5000
+
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
