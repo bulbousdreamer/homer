@@ -1,0 +1,3 @@
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Enter ${HOME}/.homer/fedora/bash_logout"; fi
+
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Exit ${HOME}/.homer/fedora/bash_logout"; fi

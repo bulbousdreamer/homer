@@ -1,8 +1,6 @@
 # export HOMER_DEBUG=
 if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Enter ${HOME}/.bash_profile"; fi
 
-export HOMER_OS_TYPE=
-
 . "${HOME}/.homer/get_os_type.sh"
 
 # https://github.com/detro/.bashrc.d
