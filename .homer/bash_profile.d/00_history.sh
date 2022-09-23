@@ -16,7 +16,7 @@ export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/history/${HOSTNAME}"
 export HISTSIZE=5000
 
 # Append history to HISTFILE when PROMPT displays
-export PROMPT_COMMAND="history -an"
+export PROMPT_COMMAND="history -a; history -n"
 
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
