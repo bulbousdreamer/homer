@@ -1,3 +1,5 @@
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Enter ${HOME}/.homer/get_os_type.sh"; fi
+
 if [ ! -z ${HOMER_OS_TYPE+x} ]; then
     export HOMER_OS_TYPE=
 
@@ -41,3 +43,5 @@ if [ ! -z ${HOMER_OS_TYPE+x} ]; then
     ;;
     esac
 fi
+
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Exit ${HOME}/.homer/get_os_type.sh"; fi
