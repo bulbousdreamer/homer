@@ -1,4 +1,4 @@
-# export HOMER_DEBUG=
+export HOMER_DEBUG=
 if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Enter ${HOME}/.bash_profile"; fi
 
 . "${HOME}/.homer/get_os_type.sh"
