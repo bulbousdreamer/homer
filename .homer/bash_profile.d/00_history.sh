@@ -11,7 +11,7 @@ export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 #
 # Whenever displaying the prompt, write the previous line to disk
 # export PROMPT_COMMAND="history -a"
-export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/bash_history"
+export HISTFILE="${HOME}/.homer/${HOMER_OS_TYPE}/history/${HOSTNAME}"
 
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
