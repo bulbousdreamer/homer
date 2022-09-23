@@ -1,5 +1,5 @@
-# homer_debug=
-if [ ! -z ${homer_debug+x} ]; then echo "Enter ${HOME}/.bash_profile"; fi
+# export HOMER_DEBUG=
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Enter ${HOME}/.bash_profile"; fi
 
 export HOMER_OS_TYPE=
 
@@ -20,4 +20,4 @@ done
 
 . "${HOME}/.bashrc"
 
-if [ ! -z ${homer_debug+x} ]; then echo "Exit ${HOME}/.profile"; fi
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Exit ${HOME}/.profile"; fi
