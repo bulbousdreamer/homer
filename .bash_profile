@@ -18,4 +18,4 @@ done
 
 . "${HOME}/.bashrc"
 
-if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Exit ${HOME}/.profile"; fi
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Exit ${HOME}/.bash_profile"; fi
