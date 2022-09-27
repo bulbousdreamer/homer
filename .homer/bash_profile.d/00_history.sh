@@ -1,3 +1,6 @@
+# export HOMER_DEBUG=
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Enter ${HOME}/.homer/bash_profile.d/00_history.sh"; fi
+
 # History Options
 #
 # Don't put duplicate lines in the history and ignore commands beginning with space
@@ -19,3 +22,5 @@ export PROMPT_COMMAND="history -a; history -n${PROMPT_COMMAND:+;${PROMPT_COMMAND
 
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
+
+if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Exit ${HOME}/.homer/bash_profile.d/00_history.sh"; fi

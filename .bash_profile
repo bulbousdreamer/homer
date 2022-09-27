@@ -1,4 +1,4 @@
-export HOMER_DEBUG=
+# export HOMER_DEBUG=
 if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Enter ${HOME}/.bash_profile"; fi
 
 . "${HOME}/.homer/get_os_type.sh"
@@ -8,7 +8,7 @@ if [ ! -z ${HOMER_DEBUG+x} ]; then echo "Enter ${HOME}/.bash_profile"; fi
 bash_profiles=()
 while IFS= read -d '' -r; do
 	bash_profiles+=("${REPLY}")
-done < <(find "${HOME}/.homer/bash_profile.d" -mindepth 1 -maxdepth 1 -type f -name *.sh -print0)
+done < <(find "${HOME}/.homer/bash_profile.d" -mindepth 1 -maxdepth 1 -type f -name '*.sh' -print0)
 
 for bash_profile in "${bash_profiles[@]}"; do
   . "${bash_profile}"
