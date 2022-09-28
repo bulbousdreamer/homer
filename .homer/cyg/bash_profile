@@ -1,2 +1,7 @@
 # The latest version as installed by the Cygwin Setup program can
 # always be found at /etc/defaults/etc/skel/.bash_profile
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval "$('/c/ProgramData/Anaconda3/Scripts/conda.exe' 'shell.bash' 'hook')"
+# <<< conda initialize <<<
