@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -x
 set -u
 
 # https://mywiki.wooledge.org/BashGuide/Arrays
@@ -17,6 +17,6 @@ for repo in "${repos[@]}"; do
 	git -C "${repo}" config --local user.name "${1}"
 	git -C "${repo}" config --local user.email "${2}"
 
-	git submodule foreach "git -C \"${repo}\" config --local user.name \"${1}\""
-	git submodule foreach "git -C \"${repo}\" config --local user.email \"${2}\""
+	git -C "${repo}" submodule foreach "git config --local user.name \"${1}\""
+	git -C "${repo}" submodule foreach "git config --local user.email \"${2}\""
 done
