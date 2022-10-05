@@ -16,3 +16,11 @@ if cmp --silent "${old_file}" "${new_file}"; then
 fi
 
 bcompare  "${old_file}" "${new_file}"
+
+return_status=$?
+
+if [ ${return_status} -lt 100 ]; then
+    exit 0
+else
+    exit 1
+fi
