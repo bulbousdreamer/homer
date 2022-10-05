@@ -1,4 +1,5 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -u
+if [ ! -z ${HOMER_DEBUG+x} ]; then set -x; fi
 
 path="${1}"
 old_file="${2}"
